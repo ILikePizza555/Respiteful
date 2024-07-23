@@ -3,7 +3,8 @@ plugins {
     id 'org.spongepowered.mixin'
     id 'org.parchmentmc.librarian.forgegradle'
     id 'maven-publish'
-    id "me.modmuss50.mod-publish-plugin" version "0.4.0"
+    id 'me.modmuss50.mod-publish-plugin' version '0.4.0'
+    id 'idea'
 }
 
 archivesBaseName = "${modid}-${mod_version}"
@@ -80,13 +81,15 @@ minecraft {
 
 
 repositories {
+    mavenLocal()
+    mavenCentral()
     maven {
         name 'Tterrag maven'
         url 'https://maven.tterrag.com/'
     }
     maven {
-        name 'Progwml6 maven'
-        url 'https://dvs1.progwml6.com/files/maven'
+        name 'Blamejared Maven'
+        url 'https://maven.blamejared.com'
     }
     maven {
         name "Abnormals Maven"
@@ -112,8 +115,8 @@ repositories {
 dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
 
-    compileOnly(annotationProcessor("com.github.llamalad7.mixinextras:mixinextras-common:${mixin_extras_version}"))
-    implementation(jarJar("com.github.llamalad7.mixinextras:mixinextras-forge:${mixin_extras_version}")) {
+    compileOnly(annotationProcessor("io.github.llamalad7:mixinextras-common:${mixin_extras_version}"))
+    implementation(jarJar("io.github.llamalad7:mixinextras-forge:${mixin_extras_version}")) {
         transitive = false
         jarJar.ranged(it, "[${mixin_extras_version},)")
     }
@@ -156,7 +159,7 @@ processResources {
 }
 
 jar {
-    classifier "slim"
+    archiveClassifier = "slim"
     from "LICENSE"
     manifest {
         attributes([
@@ -206,7 +209,7 @@ publishMods {
 jar.finalizedBy('reobfJar')
 
 tasks.jarJar {
-    classifier ""
+    archiveClassifier = ""
     from "LICENSE"
 }
 
@@ -222,4 +225,11 @@ publishing {
 
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8' // Use the UTF-8 charset for Java compilation
+}
+
+idea{
+    module {
+        downloadJavadoc = true
+        downloadSources = true
+    }
 }

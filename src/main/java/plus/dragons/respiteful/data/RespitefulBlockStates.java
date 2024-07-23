@@ -11,7 +11,7 @@ import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.registries.ForgeRegistries;
 
 public class RespitefulBlockStates {
-    
+
     public static void cake(DataGenContext<Block, ? extends CakeBlock> ctx, RegistrateBlockstateProvider prov) {
         prov.getVariantBuilder(ctx.getEntry())
             .forAllStates(state -> {
@@ -29,7 +29,7 @@ public class RespitefulBlockStates {
                 ).build();
             });
     }
-    
+
     public static void candleCake(DataGenContext<Block, FlavoredCandleCakeBlock> ctx, RegistrateBlockstateProvider prov) {
         prov.getVariantBuilder(ctx.getEntry())
             .forAllStates(state -> {
@@ -47,5 +47,5 @@ public class RespitefulBlockStates {
                 ).build();
             });
     }
-    
+
 }

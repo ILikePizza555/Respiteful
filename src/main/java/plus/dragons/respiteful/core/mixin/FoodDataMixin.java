@@ -12,19 +12,23 @@ import plus.dragons.respiteful.entries.RespitefulMobEffects;
 
 @Mixin(value = FoodData.class, priority = 900)
 public class FoodDataMixin {
-    
+
     @Unique
     private int respiteful$maturity = 0;
-    
+
     @ModifyVariable(method = "eat(IF)V", at = @At("HEAD"), argsOnly = true)
     private int respiteful$addMaturityNutrition(int nutrition) {
         return nutrition == 0 ? 0 : nutrition + respiteful$maturity;
     }
-    
+
     @Inject(method = "tick", at = @At("HEAD"))
     private void respiteful$updateMaturity(Player player, CallbackInfo ci) {
-        this.respiteful$maturity = player.hasEffect(RespitefulMobEffects.MATURITY.get())
-            ? player.getEffect(RespitefulMobEffects.MATURITY.get()).getAmplifier() + 1 : 0;
+        var instance = player.getEffect(RespitefulMobEffects.MATURITY.get());
+        if (instance == null) {
+            this.respiteful$maturity = 0;
+        } else {
+            this.respiteful$maturity = instance.getAmplifier() + 1;
+        }
     }
-    
+
 }

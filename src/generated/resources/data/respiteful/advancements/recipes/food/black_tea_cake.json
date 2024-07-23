@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_black_tea_cake_slice": {
+    "has_black_tea_leaves": {
       "conditions": {
         "items": [
           {
             "items": [
-              "respiteful:black_tea_cake_slice"
+              "farmersrespite:black_tea_leaves"
             ]
           }
         ]
@@ -15,20 +15,21 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "respiteful:black_tea_cake_from_slices"
+        "recipe": "respiteful:black_tea_cake"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_black_tea_cake_slice",
+      "has_black_tea_leaves",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "respiteful:black_tea_cake_from_slices"
+      "respiteful:black_tea_cake"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

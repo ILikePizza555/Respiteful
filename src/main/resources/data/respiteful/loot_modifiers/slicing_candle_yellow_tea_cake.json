@@ -1,0 +1,86 @@
+{
+  "type": "farmersdelight:add_item",
+  "conditions": [
+    {
+      "condition": "minecraft:match_tool",
+      "predicate": {
+        "tag": "farmersdelight:tools/knives"
+      }
+    },
+    {
+      "condition": "minecraft:any_of",
+      "terms":[
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "respiteful:candle_yellow_tea_cake"
+        },
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "respiteful:white_candle_yellow_tea_cake"
+        },
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "respiteful:orange_candle_yellow_tea_cake"
+        },
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "respiteful:magenta_candle_yellow_tea_cake"
+        },
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "respiteful:light_blue_candle_yellow_tea_cake"
+        },
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "respiteful:yellow_candle_yellow_tea_cake"
+        },
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "respiteful:lime_candle_yellow_tea_cake"
+        },
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "respiteful:pink_candle_yellow_tea_cake"
+        },
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "respiteful:gray_candle_yellow_tea_cake"
+        },
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "respiteful:light_gray_candle_yellow_tea_cake"
+        },
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "respiteful:cyan_candle_yellow_tea_cake"
+        },
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "respiteful:purple_candle_yellow_tea_cake"
+        },
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "respiteful:blue_candle_yellow_tea_cake"
+        },
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "respiteful:brown_candle_yellow_tea_cake"
+        },
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "respiteful:green_candle_yellow_tea_cake"
+        },
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "respiteful:red_candle_yellow_tea_cake"
+        },
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "respiteful:yellow_candle_yellow_tea_cake"
+        }
+      ]
+    }
+  ],
+  "item": "respiteful:yellow_tea_cake_slice",
+  "count": 7
+}

@@ -13,31 +13,31 @@ import plus.dragons.respiteful.entries.RespitefulItems;
 public class RespitefulConfig {
     public static final Common COMMON;
     public static final ForgeConfigSpec COMMON_SPEC;
-    
+
     static {
         Pair<Common, ForgeConfigSpec> common = new Builder().configure(Common::new);
         COMMON = common.getLeft();
         COMMON_SPEC = common.getRight();
     }
-    
+
     static void register(ModLoadingContext context, IEventBus modBus) {
         context.registerConfig(ModConfig.Type.COMMON, COMMON_SPEC);
         modBus.addListener(RespitefulConfig::onConfigUpdate);
     }
-    
+
     public static void onConfigUpdate(ModConfigEvent event) {
         var config = event.getConfig();
         if (config.getSpec() == COMMON_SPEC) {
-            RespitefulItems.RespitefulFoods.replaceFoodEffects(COMMON.replaceFarmersRespiteFoodEffects.get());
+            RespitefulItems.Foods.replaceFoodEffects(COMMON.replaceFarmersRespiteFoodEffects.get());
         }
     }
-    
+
     public static class Common {
         public final ConfigValue<Boolean> enableSnowTopDrinkEffects;
         public final ConfigValue<Integer> snowTopDrinkEffectMinDuration;
         public final ConfigValue<Integer> snowTopDrinkEffectMaxDuration;
         public final ConfigValue<Boolean> replaceFarmersRespiteFoodEffects;
-        
+
         Common(Builder builder) {
             builder.push("effects");
             this.enableSnowTopDrinkEffects = builder
@@ -54,7 +54,7 @@ public class RespitefulConfig {
                 .define("replaceFarmersRespiteFoodEffects", true);
             builder.pop();
         }
-        
+
     }
-    
+
 }

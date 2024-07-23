@@ -1,5 +1,9 @@
 {
   "type": "farmersrespite:brewing",
+  "base": {
+    "count": 1000,
+    "fluid": "minecraft:water"
+  },
   "cookingtime": 2400,
   "experience": 0.35,
   "ingredients": [
@@ -10,8 +14,8 @@
       "item": "farmersrespite:green_tea_leaves"
     }
   ],
-  "needwater": true,
   "result": {
-    "item": "respiteful:mint_green_tea"
+    "count": 1000,
+    "fluid": "respiteful:mint_green_tea"
   }
 }

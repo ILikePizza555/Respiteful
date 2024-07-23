@@ -5,7 +5,7 @@
   "refmap": "respiteful.refmap.json",
   "mixins": [
     "FoodDataMixin",
-    "FoodPropertiesMixin",
+    "FoodPropertiesAccessor",
     "LivingEntityMixin",
     "MobEffectInstanceAccessor"
   ],

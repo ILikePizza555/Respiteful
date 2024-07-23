@@ -34,7 +34,7 @@ A Neapolitan add-on adding flavors from Farmer's Respite
     modId="blueprint"
     mandatory=true
     versionRange="${blueprint_version_spec}"
-    ordering="NONE"
+    ordering="AFTER"
     side="BOTH"
 
 [[dependencies.respiteful]]

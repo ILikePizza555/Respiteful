@@ -1,7 +1,8 @@
 {
   "type": "farmersrespite:brewing",
-  "container": {
-    "item": "farmersdelight:milk_bottle"
+  "base": {
+    "count": 1000,
+    "fluid": "minecraft:milk"
   },
   "cookingtime": 2400,
   "experience": 0.35,
@@ -13,8 +14,8 @@
       "item": "farmersrespite:yellow_tea_leaves"
     }
   ],
-  "needwater": false,
   "result": {
-    "item": "respiteful:vanilla_milk_tea"
+    "count": 1000,
+    "fluid": "respiteful:vanilla_milk_tea"
   }
 }

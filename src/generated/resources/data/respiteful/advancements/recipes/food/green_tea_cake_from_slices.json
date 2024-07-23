@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_coffee": {
+    "has_green_tea_cake_slice": {
       "conditions": {
         "items": [
           {
             "items": [
-              "farmersrespite:coffee"
+              "respiteful:green_tea_cake_slice"
             ]
           }
         ]
@@ -15,20 +15,21 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "respiteful:snow_top_coffee"
+        "recipe": "respiteful:green_tea_cake_from_slices"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_coffee",
+      "has_green_tea_cake_slice",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "respiteful:snow_top_coffee"
+      "respiteful:green_tea_cake_from_slices"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

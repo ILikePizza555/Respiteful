@@ -56,5 +56,6 @@
     "recipes": [
       "respiteful:respiteful_ice_cream"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

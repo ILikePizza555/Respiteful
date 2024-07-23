@@ -1,6 +1,6 @@
 package plus.dragons.respiteful.core.mixin;
 
-import com.llamalad7.mixinextras.injector.WrapWithCondition;
+import com.llamalad7.mixinextras.injector.v2.WrapWithCondition;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
@@ -13,8 +13,7 @@ public class LivingEntityMixin {
 
     @WrapWithCondition(method = "addEatEffect", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/LivingEntity;addEffect(Lnet/minecraft/world/effect/MobEffectInstance;)Z"))
     private boolean maturityIgnoreHarmfulFoodEffects(LivingEntity entity, MobEffectInstance effect) {
-        return !entity.hasEffect(RespitefulMobEffects.MATURITY.get()) ||
-               effect.getEffect().getCategory() != MobEffectCategory.HARMFUL;
+        return !(entity.hasEffect(RespitefulMobEffects.MATURITY.get()) && effect.getEffect().getCategory() == MobEffectCategory.HARMFUL);
     }
 
 }

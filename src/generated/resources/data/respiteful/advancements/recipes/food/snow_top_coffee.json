@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_black_tea_leaves": {
+    "has_coffee": {
       "conditions": {
         "items": [
           {
             "items": [
-              "farmersrespite:black_tea_leaves"
+              "farmersrespite:coffee"
             ]
           }
         ]
@@ -15,20 +15,21 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "respiteful:black_tea_cake"
+        "recipe": "respiteful:snow_top_coffee"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_black_tea_leaves",
+      "has_coffee",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "respiteful:black_tea_cake"
+      "respiteful:snow_top_coffee"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

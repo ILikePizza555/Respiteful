@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "misc",
   "key": {
     "e": {
       "tag": "forge:eggs"
@@ -24,5 +25,6 @@
   ],
   "result": {
     "item": "respiteful:black_tea_cake"
-  }
+  },
+  "show_notification": true
 }

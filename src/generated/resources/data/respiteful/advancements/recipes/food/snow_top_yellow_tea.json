@@ -3,16 +3,16 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "respiteful:yellow_tea_cake_from_slices"
+        "recipe": "respiteful:snow_top_yellow_tea"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
-    "has_yellow_tea_cake_slice": {
+    "has_yellow_tea": {
       "conditions": {
         "items": [
           {
             "items": [
-              "respiteful:yellow_tea_cake_slice"
+              "farmersrespite:yellow_tea"
             ]
           }
         ]
@@ -22,13 +22,14 @@
   },
   "requirements": [
     [
-      "has_yellow_tea_cake_slice",
+      "has_yellow_tea",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "respiteful:yellow_tea_cake_from_slices"
+      "respiteful:snow_top_yellow_tea"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }
